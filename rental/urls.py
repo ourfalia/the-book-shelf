@@ -13,5 +13,6 @@ urlpatterns = [
     path('all_reservations/', views.all_reservations, name='all_reservations'), 
     path('reservation/<int:pk>/edit/', views.edit_reservation, name='edit_reservation'),  
     path('reservation/<int:pk>/cancel/', views.cancel_reservation, name='cancel_reservation'), 
-    path('checkout/', views.checkout, name='checkout'), 
+    path('checkout/', views.checkout, name='checkout'),
+    path('checkout/success/', views.checkout_success, name='checkout_success'), 
 ]

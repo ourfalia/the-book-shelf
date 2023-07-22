@@ -113,3 +113,8 @@ def checkout(request):
         return redirect('checkout_success')
 
     return render(request, 'rental/checkout.html', {'reservations': reservations, 'total_price': total_price})
+
+
+@login_required
+def checkout_success(request):
+    return render(request, 'rental/checkout_success.html')
