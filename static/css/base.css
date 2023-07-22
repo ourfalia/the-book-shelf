@@ -5,7 +5,7 @@ html {
 body {
     background: url('/media/homepage_background.jpg') no-repeat center center;
     background-size: cover;
-    height: calc(100vh - 200px);
+    height: calc(100vh - 150px);
     font-family: 'Lato';
 }
 
@@ -14,6 +14,17 @@ body {
     border-radius: 10px;
     width: fit-content;
     margin: 10px;
+    padding: 10px;
+}
+
+.brown-bg{
+    background-color: rgb(26, 10, 1);
+}
+
+.books-bg{
+    background-color: rgb(0, 0, 0);
+    margin-top: 10%;
+    padding-top: 2%;
 }
 
 .nav-color{

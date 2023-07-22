@@ -1,41 +1,46 @@
 {% extends 'base.html' %}
 {% block content %}
+    
     <div class="container header-container">
-        <div class="row">
-            <div class="col-md-6 mx-auto black-bg">
-                <h3 class="mb-4 orange-text text-center">Book Search</h3>
-                <form method="GET" action="{% url 'book_search' %}" class="mb-4">
-                    <div class="input-group">
-                        <input type="text" name="q" class="form-control" placeholder="Search for books" aria-label="Search for books" aria-describedby="search-btn">
-                        <div class="input-group-append">
-                            <button type="submit" class="btn  orange-color" id="search-btn">Search</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        
-        <div class="row">
-            {% for book in books %}
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        {% if book.image %}
-                            <img class="card-img-top" src="{{ book.image.url }}" alt="{{ book.title }}">
-                        {% else %}
-                            <div class="card-img-top-placeholder"></div>
-                        {% endif %}
-                        <div class="card-body">
-                            <h5 class="card-title">{{ book.title }}</h5>
-                            <p class="card-text">{{ book.author }}</p>
-                            <a href="{% url 'book_detail' pk=book.pk %}" class="btn btn-primary">View Details</a>
-                        </div>
+        <div class="col-md-6 mx-auto black-bg">
+            <h3 class="mb-4 orange-text text-center">Book Search</h3>
+            <form method="GET" action="{% url 'book_search' %}" class="mb-4">
+                <div class="input-group">
+                    <input type="text" name="q" class="form-control" placeholder="Search for books" aria-label="Search for books" aria-describedby="search-btn">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn  orange-color" id="search-btn">Search</button>
                     </div>
                 </div>
-            {% empty %}
-                <div class="col-md-6 mx-auto pt-2 black-bg">
-                    <h5 class="orange-text">No books found.</h5>
-                </div>
-            {% endfor %}
+            </form>
         </div>
     </div>
+    <div class="container-fluid books-bg">
+        <div>
+            <h3 class="orange-text text-center">Our Book Collection</h3>
+        </div>
+
+        <div class="row p-3">  
+        {% for book in books %}
+            <div class="col-md-4 mb-4">
+                <div class="card m-2">
+                    {% if book.image %}
+                        <img class="card-img-top" src="{{ book.image.url }}" alt="{{ book.title }}">
+                    {% else %}
+                        <div class="card-img-top-placeholder"></div>
+                    {% endif %}
+                    <div class="card-body brown-bg">
+                        <h5 class="card-title orange-text">{{ book.title }}</h5>
+                        <p class="card-text orange-text">{{ book.author }}</p>
+                        <a href="{% url 'book_detail' pk=book.pk %}" class="btn orange-color">View Details</a>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <div class="col-md-6 mx-auto pt-2 black-bg">
+                <h5 class="orange-text">No books found.</h5>
+            </div>
+        {% endfor %}
+    </div>
+    </div>
+    
 {% endblock %}

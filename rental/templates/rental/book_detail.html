@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>{{ book.title }}</h1>
+                <p class="mb-3">Author: {{ book.author }}</p>
+                <p>{{ book.description }}</p>
+                {% if book.image %}
+                    <img src="{{ book.image.url }}" alt="{{ book.title }}" class="img-fluid mb-3">
+                {% endif %}
+                <a class="btn btn-primary" href="#">Reserve Book</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
