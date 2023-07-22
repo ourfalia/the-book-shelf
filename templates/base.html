@@ -26,16 +26,16 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
-        <div  class="row nav-color pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-6 my-auto py-1 py-lg-0 text-center text-lg-left">
+        <div  class="row nav-color pt-2 ">
+            <div class="col-12 col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h2 class="logo-font nav-text my-0">The <strong>Book</strong> Shelf</h2>
                 </a>
             </div>
-            <div class="col-12 col-lg-6 my-auto py-1 py-lg-0 text-center text-lg-right">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+            <div class="col-12 col-lg-6 text-center text-lg-right">
+                <ul class="list-inline list-unstyled my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="nav-text nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-text nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
@@ -43,7 +43,6 @@
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
-                                <a href="" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -54,6 +53,9 @@
                 </ul>
             </div>
         </div>
+        
+
+        
         
     </header>
     {% if messages %}

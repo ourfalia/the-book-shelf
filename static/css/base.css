@@ -20,6 +20,7 @@ body {
     background-color: rgb(0, 0, 0);
 }
 
+
 .nav-text,
 .orange-text {
     color: rgb(255, 140, 0);
@@ -29,8 +30,7 @@ body {
     color: rgb(252, 82, 3)
   }
 
-@media (min-width: 992px) {
-    .header-container {
-        padding-top: 200px;
-    }
+
+.header-container {
+    padding-top: 200px;
 }
