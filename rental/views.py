@@ -58,7 +58,7 @@ def user_reservations(request):
     return render(request, 'rental/user_reservations.html', {'reservations': reservations, 'total_price': total_price})
 
 
-    @login_required
+@login_required
 def all_reservations(request):
     user = request.user
     reservations = Reservation.objects.filter(user=user)
@@ -80,3 +80,15 @@ def edit_reservation(request, pk):
         return redirect('user_reservations') 
 
     return render(request, 'rental/edit_reservation.html', {'reservation': reservation})
+
+
+@login_required
+def cancel_reservation(request, pk):
+    reservation = get_object_or_404(Reservation, pk=pk)
+
+    if request.method == 'POST':
+        reservation.delete()  
+
+        return redirect('user_reservations')  
+
+    return render(request, 'rental/cancel_reservation.html', {'reservation': reservation})

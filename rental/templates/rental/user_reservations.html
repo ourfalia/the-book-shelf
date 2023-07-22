@@ -6,15 +6,15 @@
             <li class="list-group-item">
                 {{ reservation.book.title }} - {{ reservation.start_date }} to {{ reservation.end_date }}
                 - ${{ reservation.price }}
-                <a href="#" class="btn btn-primary btn-sm ml-2">Edit</a>
-                <a href="#" class="btn btn-danger btn-sm ml-2">Cancel</a>
+                <a href="{% url 'edit_reservation' reservation.pk %}" class="btn btn-primary btn-sm ml-2">Edit</a>
+                <a href="{% url 'cancel_reservation' reservation.pk %}" class="btn btn-danger btn-sm ml-2">Cancel</a>
             </li>
         {% empty %}
             <li class="list-group-item">You have no reservations.</li>
         {% endfor %}
     </ul>
     <p>Total Price: ${{ total_price }}</p>
-    <a class="btn btn-primary" href="#">View All Reservations</a> 
+    <a class="btn btn-primary" href="{% url 'all_reservations' %}">View All Reservations</a> 
     <a class="btn btn-success" href="{% url 'book_list' %}">Reserve More Books</a>
     <a class="btn btn-primary" href="#">Checkout and Pay</a>
 {% endblock %}
