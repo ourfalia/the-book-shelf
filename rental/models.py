@@ -11,3 +11,14 @@ class Book(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Reservation(models.Model):
+    book = models.ForeignKey(Book, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    start_date = models.DateField()
+    end_date = models.DateField()
+    is_checked_out = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"{self.user.username} - {self.book.title} - {self.start_date} to {self.end_date}"

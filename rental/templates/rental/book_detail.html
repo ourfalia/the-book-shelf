@@ -9,7 +9,7 @@
                 {% if book.image %}
                     <img src="{{ book.image.url }}" alt="{{ book.title }}" class="img-fluid mb-3">
                 {% endif %}
-                <a class="btn btn-primary" href="#">Reserve Book</a>
+                <a class="btn btn-primary" href="{% url 'reserve_book' pk=book.pk %}">Reserve Book</a>
             </div>
         </div>
     </div>
