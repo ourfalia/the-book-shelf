@@ -5,6 +5,32 @@ html {
 body {
     background: url('/media/homepage_background.jpg') no-repeat center center;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: calc(100vh - 200px);
     font-family: 'Lato';
+}
+
+.home-text{
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    width: fit-content;
+    padding: 10px;
+}
+
+.nav-color{
+    background-color: rgb(0, 0, 0);
+}
+
+.nav-text,
+.orange-text {
+    color: rgb(255, 140, 0);
+}
+
+.nav-text:hover {
+    color: rgb(252, 82, 3)
+  }
+
+@media (min-width: 992px) {
+    .header-container {
+        padding-top: 200px;
+    }
 }
