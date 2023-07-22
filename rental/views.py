@@ -41,3 +41,18 @@ def reserve_book(request, pk):
         return redirect('user_reservations')
 
     return render(request, 'rental/book_reserve.html', {'book': book})
+
+
+@login_required
+def user_reservations(request):
+    user = request.user
+    reservations = Reservation.objects.filter(user=user, is_checked_out=False)
+
+    total_price = 0
+    for reservation in reservations:
+        
+        num_days = (reservation.end_date - reservation.start_date).days + 1
+        reservation.price = num_days * 3  
+        total_price += reservation.price
+
+    return render(request, 'rental/user_reservations.html', {'reservations': reservations, 'total_price': total_price})
