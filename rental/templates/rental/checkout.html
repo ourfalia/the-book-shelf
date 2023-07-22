@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Checkout</h1>
+    <ul class="list-group">
+        {% for reservation in reservations %}
+            <li class="list-group-item">
+                {{ reservation.book.title }} - {{ reservation.start_date }} to {{ reservation.end_date }}
+                - ${{ reservation.price }}
+            </li>
+        {% empty %}
+            <li class="list-group-item">No reservations to checkout.</li>
+        {% endfor %}
+    </ul>
+    <p>Total Price: ${{ total_price }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">Checkout</button>
+    </form>
+{% endblock %}
