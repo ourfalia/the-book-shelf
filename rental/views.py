@@ -56,3 +56,11 @@ def user_reservations(request):
         total_price += reservation.price
 
     return render(request, 'rental/user_reservations.html', {'reservations': reservations, 'total_price': total_price})
+
+
+    @login_required
+def all_reservations(request):
+    user = request.user
+    reservations = Reservation.objects.filter(user=user)
+
+    return render(request, 'rental/all_reservations.html', {'reservations': reservations})
