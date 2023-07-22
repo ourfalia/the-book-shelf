@@ -9,6 +9,9 @@
 {% block content %}
     <div class="container home-text">
         <h2 class="orange-text">Welcome to our book rental Website!</h2>
-        <p class="orange-text">Feel free to explore our book collection and make reservations.</p>
+        <p class="orange-text">Feel free to explore our book collection, <br> make reservations and visit our store to collect them.</p>
+    </div>
+    <div class="d-flex justify-content-center align-items-center pt-5">
+        <a href="{% url 'book_list' %}" class="btn  orange-color">View Books</a>
     </div>
 {% endblock %}

@@ -20,10 +20,17 @@ body {
     background-color: rgb(0, 0, 0);
 }
 
+.orange-color{
+    background-color: rgb(255, 140, 0);
+}
 
 .nav-text,
 .orange-text {
     color: rgb(255, 140, 0);
+}
+
+.btn:hover{
+    background-color: rgb(252, 82, 3);
 }
 
 .nav-text:hover {
