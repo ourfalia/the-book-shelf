@@ -64,3 +64,19 @@ def all_reservations(request):
     reservations = Reservation.objects.filter(user=user)
 
     return render(request, 'rental/all_reservations.html', {'reservations': reservations})
+
+@login_required
+def edit_reservation(request, pk):
+    reservation = get_object_or_404(Reservation, pk=pk)
+
+    if request.method == 'POST':
+        start_date = request.POST['start_date']
+        end_date = request.POST['end_date']
+
+        reservation.start_date = start_date
+        reservation.end_date = end_date
+        reservation.save()
+
+        return redirect('user_reservations') 
+
+    return render(request, 'rental/edit_reservation.html', {'reservation': reservation})
