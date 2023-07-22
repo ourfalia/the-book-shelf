@@ -1,0 +1,10 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/homepage_background.jpg') no-repeat center center;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    font-family: 'Lato';
+}
