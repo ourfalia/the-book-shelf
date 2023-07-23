@@ -40,3 +40,10 @@ class ViewsTestCase(TestCase):
         })
         self.assertEqual(response.status_code, 302)  
         self.assertTrue(Reservation.objects.filter(book=self.book2, user=self.user).exists())
+
+    def test_user_reservations_view(self):
+        self.client.login(username='testuser', password='testpassword')
+        response = self.client.get(reverse('user_reservations'))
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Book 1')
+        self.assertNotContains(response, 'Book 2')
