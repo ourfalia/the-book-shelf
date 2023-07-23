@@ -36,6 +36,10 @@ def reserve_book(request, pk):
         end_date = request.POST['end_date']
         user = request.user
 
+        today = timezone.now().date()
+        if start_date < str(today) or end_date < str(today):
+            return render(request, 'rental/book_unavailable.html', {'book': book})
+
         if Reservation.objects.filter(book=book, start_date__lte=end_date, end_date__gte=start_date).exists():
             return render(request, 'rental/book_unavailable.html', {'book': book})
 
@@ -121,9 +125,16 @@ def checkout(request):
             reservation.save()
 
         return redirect('checkout_success')
+    
+    books = Book.objects.filter(reservation__in=reservations)
 
-    return render(request, 'rental/checkout.html', {'reservations': reservations, 'total_price': total_price,
-        'stripe_public_key': stripe_public_key, 'client_secret': intent.client_secret,})
+    return render(request, 'rental/checkout.html', {
+        'reservations': reservations, 
+        'total_price': total_price,
+        'stripe_public_key': stripe_public_key, 
+        'client_secret': intent.client_secret,
+        'books': books,
+        })
         
 
 
