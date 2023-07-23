@@ -1,20 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Your Reservations</h1>
-    <ul class="list-group">
-        {% for reservation in reservations %}
-            <li class="list-group-item">
-                {{ reservation.book.title }} - {{ reservation.start_date }} to {{ reservation.end_date }}
-                - ${{ reservation.price }}
-                <a href="{% url 'edit_reservation' reservation.pk %}" class="btn btn-primary btn-sm ml-2">Edit</a>
-                <a href="{% url 'cancel_reservation' reservation.pk %}" class="btn btn-danger btn-sm ml-2">Cancel</a>
-            </li>
-        {% empty %}
-            <li class="list-group-item">You have no reservations.</li>
-        {% endfor %}
-    </ul>
-    <p>Total Price: ${{ total_price }}</p>
-    <a class="btn btn-primary" href="{% url 'all_reservations' %}">View All Reservations</a> 
-    <a class="btn btn-success" href="{% url 'book_list' %}">Reserve More Books</a>
-    <a class="btn btn-primary" href="{% url 'checkout' %}">Checkout and Pay</a>
+<div class="container header-container "></div>
+    <div class="black-bg rounded p-5">
+        <h3 class="orange-text mb-3">Your Reservations</h3>
+        <ul class="list-group mb-3">
+            {% for reservation in reservations %}
+                <li class="list-group-item ">
+                    {{ reservation.book.title }} - {{ reservation.start_date }} to {{ reservation.end_date }}
+                    - ${{ reservation.price }}
+                    <a href="{% url 'edit_reservation' reservation.pk %}" class="btn btn-primary  ml-2 mt-2">Edit</a>
+                    <a href="{% url 'cancel_reservation' reservation.pk %}" class="btn btn-danger  ml-2 mt-2">Cancel</a>
+                </li><br>
+            {% empty %}
+                <li class="list-group-item ">You have no reservations.</li>
+            {% endfor %}
+        </ul>
+        <p class="orange-text">Total Price: ${{ total_price }}</p>
+        <a class="btn orange-color mb-2" href="{% url 'all_reservations' %}">View All Reservations</a> 
+        <a class="btn orange-color ml-2 mb-2" href="{% url 'book_list' %}">Reserve More Books</a>
+        <a class="btn btn-success ml-2 mb-2" href="{% url 'checkout' %}">Checkout and Pay</a>
+    </div>
+</div>
 {% endblock %}
