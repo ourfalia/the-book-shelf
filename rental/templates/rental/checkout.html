@@ -4,6 +4,11 @@
 <div class="container header-container ">
     <div class="black-bg rounded p-5">
         <h3 class="orange-text">Checkout</h3>
+        {% if error_message %}
+            <div class="alert alert-danger" role="alert">
+                {{ error_message }}
+            </div>
+        {% endif %}
         <ul class="list-group">
             {% for reservation in reservations %}
                 <li class="list-group-item">
@@ -27,6 +32,7 @@
                 <input type="hidden" value="{{ client_secret }}" name="client_secret">
             </fieldset>
             <button type="submit" class="btn orange-color mt-3">Complete Order</button>
+            <input type="hidden" name="payment_intent_id" id="payment-intent-id">
         </form>
     </div>
 </div>
