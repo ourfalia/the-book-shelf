@@ -26,3 +26,8 @@ class ViewsTestCase(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'Book 1')
         self.assertNotContains(response, 'Book 2')
+
+    def test_book_detail_view(self):
+        response = self.client.get(reverse('book_detail', args=[self.book1.pk]))
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.context['book'], self.book1)
