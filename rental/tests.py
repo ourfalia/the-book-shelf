@@ -21,3 +21,8 @@ class ViewsTestCase(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertQuerysetEqual(response.context['books'], [repr(self.book1), repr(self.book2)], ordered=False)
 
+    def test_book_search_view(self):
+        response = self.client.get(reverse('book_search'), {'q': 'Book 1'})
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Book 1')
+        self.assertNotContains(response, 'Book 2')
