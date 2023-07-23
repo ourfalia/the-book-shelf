@@ -1,14 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>All Reservations</h1>
-    <ul class="list-group">
-        {% for reservation in reservations %}
-            <li class="list-group-item">
-                {{ reservation.book.title }} - {{ reservation.start_date }} to {{ reservation.end_date }}
-                - {% if reservation.is_checked_out %}Checked Out{% else %}Not Checked Out{% endif %}
-            </li>
-        {% empty %}
-            <li class="list-group-item">You have no reservations.</li>
-        {% endfor %}
-    </ul>
+<div class="container header-container ">
+    <div class="black-bg rounded p-5">
+        <h3 class="orange-text m-2">All Reservations</h3>
+        <ul class="list-group">
+            {% for reservation in reservations %}
+                <li class="list-group-item">
+                    {{ reservation.book.title }} - {{ reservation.start_date }} to {{ reservation.end_date }}
+                    - {% if reservation.is_checked_out %}Checked Out{% else %}Not Checked Out{% endif %}
+                </li><br>
+            {% empty %}
+                <li class="list-group-item ">You have no reservations.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
 {% endblock %}
