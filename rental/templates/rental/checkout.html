@@ -1,19 +1,32 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Checkout</h1>
-    <ul class="list-group">
-        {% for reservation in reservations %}
-            <li class="list-group-item">
-                {{ reservation.book.title }} - {{ reservation.start_date }} to {{ reservation.end_date }}
-                - ${{ reservation.price }}
-            </li>
-        {% empty %}
-            <li class="list-group-item">No reservations to checkout.</li>
-        {% endfor %}
-    </ul>
-    <p>Total Price: ${{ total_price }}</p>
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit" class="btn btn-primary">Checkout</button>
-    </form>
+<div class="container header-container ">
+    <div class="black-bg rounded p-5">
+        <h3 class="orange-text">Checkout</h3>
+        <ul class="list-group">
+            {% for reservation in reservations %}
+                <li class="list-group-item">
+                    {{ reservation.book.title }} - {{ reservation.start_date }} to {{ reservation.end_date }}
+                    -  € {{ reservation.price }}
+                </li><br>
+            {% empty %}
+                <li class="list-group-item orange-text">No reservations to checkout.</li>
+            {% endfor %}
+        </ul>
+        <p class="orange-text mt-3">Total Price: ${{ total_price }}</p>
+        <form method="post">
+            {% csrf_token %}
+            <fieldset class="px-3">
+                <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                <!-- A Stripe card element will go here -->
+                <div class="mb-3" id="card-element"></div>
+                <!-- Used to display form errors -->
+                <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                <!-- Pass the client secret to the view so we can get the payment intent id -->
+                <input type="hidden" value="{{ client_secret }}" name="client_secret">
+            </fieldset>
+            <button type="submit" class="btn orange-color">Complete Order</button>
+        </form>
+    </div>
+</div>
 {% endblock %}
