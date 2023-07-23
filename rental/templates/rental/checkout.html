@@ -15,7 +15,7 @@
             {% endfor %}
         </ul>
         <p class="orange-text mt-3">Total Price: ${{ total_price }}</p>
-        <form method="post">
+        <form action="{% url 'checkout' %}" method="POST" id="payment-form">
             {% csrf_token %}
             <fieldset>
                 <legend class="fieldset-label orange-text px-2 w-auto">Payment</legend>
