@@ -1,14 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Reserve Book</h1>
-    <form method="post">
-        {% csrf_token %}
-        <label for="start_date">Start Date:</label>
-        <input type="date" name="start_date" required>
-        <br>
-        <label for="end_date">End Date:</label>
-        <input type="date" name="end_date" required>
-        <br>
-        <button type="submit" class="btn btn-primary">Reserve</button>
-    </form>
+    <div class="container header-container ">
+        <div class="black-bg rounded p-5">
+            <div>
+                <h3 class="orange-text mb-3">Reservation Form</h3>
+                <form method="post">
+                    {% csrf_token %}
+                    <label class="orange-text mr-3" for="start_date">Start Date:</label>
+                    <input class="mb-3" type="date" name="start_date" required>
+                    <br>
+                    <label class="orange-text mr-3" for="end_date">End Date:</label>
+                    <input type="date" name="end_date" required>
+                    <br>
+                    <button class="btn orange-color mt-3" type="submit">Reserve</button>
+                </form>   
+            </div> 
+        </div>
+    </div>
+    
 {% endblock %}
