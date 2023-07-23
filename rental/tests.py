@@ -65,4 +65,11 @@ class ViewsTestCase(TestCase):
         edited_reservation = Reservation.objects.get(pk=self.reservation.pk)
         self.assertEqual(edited_reservation.start_date.strftime('%Y-%m-%d'), '2023-07-06')
         self.assertEqual(edited_reservation.end_date.strftime('%Y-%m-%d'), '2023-07-09')
+
+    def test_cancel_reservation_view(self):
+        self.client.login(username='testuser', password='testpassword')
+        response = self.client.post(reverse('cancel_reservation', args=[self.reservation.pk]))
+        self.assertEqual(response.status_code, 302)  # Check if it redirects after canceling
+        self.assertFalse(Reservation.objects.filter(pk=self.reservation.pk).exists())
+
     
