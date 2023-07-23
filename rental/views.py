@@ -112,7 +112,7 @@ def checkout(request):
 
         return redirect('checkout_success')
 
-    return render(request, 'rental/checkout.html', {'reservations': reservations, 'total_price': total_price})
+    return render(request, 'rental/checkout.html', {'reservations': reservations, 'total_price': total_price, 'stripe_public_key': 'pk_test_51MxVISLzyhXbyL2qzINGSsmWN9Vvf5TyhqnlvIYbmnXa4iDBYtIWYk8TRCf9X1PP94l0f0PEQTphtHWHwDffFCA500sqq5HkUp'})
 
 
 @login_required

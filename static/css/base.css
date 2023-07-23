@@ -52,3 +52,18 @@ body {
 .header-container {
     padding-top: 150px;
 }
+
+.StripeElement,
+.stripe-style-input {
+  box-sizing: border-box;
+  height: 40px;
+  padding: 10px 12px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+
+.fieldset-label {
+    position: relative;
+    right: .5rem;
+}

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <div class="container header-container ">
     <div class="black-bg rounded p-5">
@@ -16,8 +17,8 @@
         <p class="orange-text mt-3">Total Price: ${{ total_price }}</p>
         <form method="post">
             {% csrf_token %}
-            <fieldset class="px-3">
-                <legend class="fieldset-label small orange-text px-2 w-auto">Payment</legend>
+            <fieldset>
+                <legend class="fieldset-label orange-text px-2 w-auto">Payment</legend>
                 <!-- A Stripe card element will go here -->
                 <div class="mb-3" id="card-element"></div>
                 <!-- Used to display form errors -->
@@ -25,8 +26,15 @@
                 <!-- Pass the client secret to the view so we can get the payment intent id -->
                 <input type="hidden" value="{{ client_secret }}" name="client_secret">
             </fieldset>
-            <button type="submit" class="btn orange-color">Complete Order</button>
+            <button type="submit" class="btn orange-color mt-3">Complete Order</button>
         </form>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'js/stripe_elements.js' %}"></script>
 {% endblock %}
