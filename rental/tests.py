@@ -31,3 +31,12 @@ class ViewsTestCase(TestCase):
         response = self.client.get(reverse('book_detail', args=[self.book1.pk]))
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.context['book'], self.book1)
+
+    def test_reserve_book_view(self):
+        self.client.login(username='testuser', password='testpassword')
+        response = self.client.post(reverse('reserve_book', args=[self.book2.pk]), {
+            'start_date': '2023-07-10',
+            'end_date': '2023-07-15'
+        })
+        self.assertEqual(response.status_code, 302)  
+        self.assertTrue(Reservation.objects.filter(book=self.book2, user=self.user).exists())
