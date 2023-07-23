@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Book, Reservation
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
+from django.conf import settings
+import stripe
 
 # Create your views here.
 
@@ -96,6 +98,8 @@ def cancel_reservation(request, pk):
 
 @login_required
 def checkout(request):
+    stripe_public_key = settings.STRIPE_PUBLIC_KEY
+    stripe_secret_key = settings.STRIPE_SECRET_KEY
     user = request.user
     reservations = Reservation.objects.filter(user=user, is_checked_out=False)
     total_price = 0
@@ -104,6 +108,12 @@ def checkout(request):
         num_days = (reservation.end_date - reservation.start_date).days + 1
         reservation.price = num_days * 3  
         total_price += reservation.price
+        stripe_total = round(total_price * 100)
+        stripe.api_key = stripe_secret_key
+        intent = stripe.PaymentIntent.create(
+            amount=stripe_total,
+            currency=settings.STRIPE_CURRENCY,
+        )
 
     if request.method == 'POST':
         for reservation in reservations:
@@ -112,7 +122,9 @@ def checkout(request):
 
         return redirect('checkout_success')
 
-    return render(request, 'rental/checkout.html', {'reservations': reservations, 'total_price': total_price, 'stripe_public_key': 'pk_test_51MxVISLzyhXbyL2qzINGSsmWN9Vvf5TyhqnlvIYbmnXa4iDBYtIWYk8TRCf9X1PP94l0f0PEQTphtHWHwDffFCA500sqq5HkUp'})
+    return render(request, 'rental/checkout.html', {'reservations': reservations, 'total_price': total_price,
+        'stripe_public_key': stripe_public_key, 'client_secret': intent.client_secret,})
+        
 
 
 @login_required
