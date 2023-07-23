@@ -1,14 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Edit Reservation</h1>
-    <form method="post">
-        {% csrf_token %}
-        <label for="start_date">Start Date:</label>
-        <input type="date" name="start_date" value="{{ reservation.start_date }}" required>
-        <br>
-        <label for="end_date">End Date:</label>
-        <input type="date" name="end_date" value="{{ reservation.end_date }}" required>
-        <br>
-        <button type="submit" class="btn btn-primary">Update Reservation</button>
-    </form>
+<div class="container header-container ">
+    <div class="black-bg rounded p-5">
+        <h3 class="orange-text mb-3">Edit Reservation</h3>
+        <form method="post">
+            {% csrf_token %}
+            <label class="orange-text mt-3 mr-2" for="start_date">Start Date:</label>
+            <input type="date" name="start_date" value="{{ reservation.start_date }}" required>
+            <br>
+            <label class="orange-text mt-3 mr-2" for="end_date">End Date:</label>
+            <input type="date" name="end_date" value="{{ reservation.end_date }}" required>
+            <br>
+            <button type="submit" class="btn orange-color mt-3">Update Reservation</button>
+        </form>
+    </div>
+</div>
 {% endblock %}
