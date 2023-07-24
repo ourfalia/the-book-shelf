@@ -53,11 +53,7 @@
                     </li>                 
                 </ul>
             </div>
-        </div>
-        
-
-        
-        
+        </div>   
     </header>
     {% if messages %}
         <div class="message-container"></div>
@@ -68,6 +64,69 @@
 
     {% block content %}
     {% endblock %}
+    <!-- Footer -->
+    <footer class="text-center text-lg-start orange-text footer-bg mt-5">
+        <section class="pt-3">
+            <div class="container text-center text-md-start mt-5 footer-bg">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold">The Book Shelf</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto " />
+                        <p>
+                            Welcome to The Book Shelf, your premier destination for hassle-free book rentals in Dublin!
+                            Discover a vast collection of titles, reserve your favorites online, and collect your books 
+                            conveniently at our designated location. Embark on an exciting literary journey with us!
+                        </p>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold">Reservations</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto" />
+                        <p>
+                            <a href="{% url 'all_reservations' %}" class="orange-text">View Reservations</a>
+                        </p>
+                        <p>
+                            <a href="{% url 'book_list' %}" class="orange-text">View Our Books</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold">Useful links</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto" />
+                        <p>
+                            <a href="{% url 'account_login' %}" class="orange-text">Log In</a>
+                        </p>
+                        <p>
+                            <a href="{% url 'account_logout' %}" class="orange-text">Log Out</a>
+                        </p>
+                        <p>
+                            <a href="{% url 'home' %}" class="orange-text">Home</a>
+                        </p>
+                    </div>
+                    <div id="contact" class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold">Contact</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto" />
+                        <p><i class="fas fa-home mr-3"></i> Dublin, D2 1012, Ireland</p>
+                        <p><i class="fas fa-envelope mr-3"></i> info@book-shelf.com</p>
+                        <p><i class="fas fa-phone mr-3"></i> + 353 789 253 41</p>
+                        <p><i class="fas fa-phone mr-3"></i> + 353 789 253 40</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="mb-4" />
+        <section class="text-center pb-5">
+            <a class="btn btn-outline-light btn-floating m-1 orange-color" href="https://www.facebook.com/" role="button"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1 orange-color" href="https://twitter.com/" role="button"><i
+                    class="fab fa-twitter"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1 orange-color" href="https://www.google.com/" role="button"><i
+                    class="fab fa-google"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1 orange-color" href="https://www.instagram.com/" role="button"><i
+                    class="fab fa-instagram"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1 orange-color" href="https://www.linkedin.com/" role="button"><i
+                    class="fab fa-linkedin-in"></i></a>
+        </section>
+    </footer>
+    <!-- Footer -->
 
     {% block postloadjs %}
     {% endblock %}

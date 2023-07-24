@@ -49,6 +49,9 @@ body {
     color: rgb(252, 82, 3)
   }
 
+.footer-bg {
+    background-color: black;
+}
 
 .header-container {
     padding-top: 150px;
