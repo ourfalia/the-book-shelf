@@ -106,6 +106,10 @@ def checkout(request):
     stripe_secret_key = settings.STRIPE_SECRET_KEY
     user = request.user
     reservations = Reservation.objects.filter(user=user, is_checked_out=False)
+
+    if not reservations.exists():
+        return redirect('user_reservations')
+
     total_price = 0
 
     for reservation in reservations:
