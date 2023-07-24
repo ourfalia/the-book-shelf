@@ -15,7 +15,7 @@ from pathlib import Path
 
 
 def get_heroku_hostname():
-    return os.environ.get('HOSTNAME', '')
+    return os.environ.get('the-book-shelf-2a8f1c030fac.herokuapp.com', 'HOSTNAME')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
