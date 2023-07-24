@@ -7,7 +7,7 @@ def get_heroku_hostname():
     return os.environ.get('HOSTNAME')
 
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
