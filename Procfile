@@ -1,1 +1,1 @@
-    web: gunicorn book_rental.wsgi:application
+web: gunicorn book_rental.wsgi:application
