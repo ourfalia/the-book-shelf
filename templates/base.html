@@ -42,7 +42,7 @@
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0 nav-color" aria-labelledby="user-options">
+                        <div class="dropdown-menu border-0 nav-color text-center" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 <a href="{% url 'account_logout' %}" class="nav-text orange-text d-block">Logout</a>
                             {% else %}
