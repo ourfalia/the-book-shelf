@@ -5,6 +5,7 @@
 Welcome to The Book Shelf, your premier destination for hassle-free book rentals in Dublin!
 Discover a vast collection of titles, reserve your favorites online, and collect your books 
 conveniently at our designated location. This document aims to provide an overview of the design process and reasoning behind the The Book Shelf website, as well as showcase the wireframes, mockups, and diagrams created during its development. The purpose of this documentation is to offer a comprehensive understanding of the design choices and facilitate effective collaboration among stakeholders, developers, and designers.
+ The website is fully functioning as an E-commerce application used to enable potential customers to reserve books online and pay for their reservations. It is designed to be responsive and accessible on a range of devices, making it easy to navigate for potential partners. A B2C (business to customer) model was used in building this website.  The application is based on a single payment model as customers pay for single reservations they make online. Due to low budget, our marketing strategy was confined to only Facebook page. The project was also linked to social media by ceating a page on FaceBook for the business. The FaceBook page can be viewed
 
 <h2 align="center"><img src="#"></h2>
 
