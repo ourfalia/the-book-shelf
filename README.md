@@ -1,108 +1,241 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1 align="center">The book Shelf</h1>
 
-Welcome USER_NAME,
+[View the live project here.](#)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Welcome to The Book Shelf, your premier destination for hassle-free book rentals in Dublin!
+Discover a vast collection of titles, reserve your favorites online, and collect your books 
+conveniently at our designated location. This document aims to provide an overview of the design process and reasoning behind the The Book Shelf website, as well as showcase the wireframes, mockups, and diagrams created during its development. The purpose of this documentation is to offer a comprehensive understanding of the design choices and facilitate effective collaboration among stakeholders, developers, and designers.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+<h2 align="center"><img src="#"></h2>
 
-## Gitpod Reminders
+## User Experience (UX)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+- ### User stories
 
-`python3 -m http.server`
+  - #### User Goals
 
-A blue button should appear to click: _Make Public_,
+        1. As a user, I want to be able to register for an account and easily login/out
+        2. As a user, I want to be able to easily navigate through the website
+        3. As a user, I want to be able to contact the restaurant
+        4. As a user, I want to be able to easily make a reservation
+        5. As a user, I want to be able to view my reservation
+        6. As a user, I want to be able to edit my reservation
+        7. As a user, I want to be able to cancel my reservation
+        8. As a user, I want to be able to view detailed information about a book
+        9. As a user, I want to be able to view all the books
+        10. As a user, I want to search for books so that I can find specific books I'm interested in.
+        11. As a user, I want to pay for my reservations securely and receive confirmation of my successful payment.
 
-Another blue button should appear to click: _Open Browser_.
+- ### Design
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+  - #### Design Process and Reasoning:
 
-A blue button should appear to click: _Make Public_,
+  The design process for the Book Shelf Website followed a user-centered approach, focusing on creating an intuitive and visually appealing experience for visitors. The key steps undertaken during the design process included research, ideation, prototyping, testing, and refinement.
 
-Another blue button should appear to click: _Open Browser_.
+  Extensive user research was conducted to gain insights into the target audience, their preferences, and expectations when visiting a restaurant website. This research informed the design decisions and helped create a user-centric interface.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+  The core design principles guiding the Book Shelf website were elegance, simplicity. 
+  - #### Wireframes:
 
-To log into the Heroku toolbelt CLI:
+  Wireframes were created as a blueprint for the Book Shelf website, outlining the layout, structure, and key elements of each page. These wireframes illustrate the placement of navigation pages, content sections, imagery, and interactive components. They serve as a foundation for further design iterations and development.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+  ##### Home page Wireframe <img src="#"></h2>
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+  ##### List of books page Wireframe <img src="#"></h2>
 
-------
+  ##### Mobile Wireframe <img src="#"></h2>
 
-## Release History
+  - #### Mockups:
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+  High-fidelity mockups were developed to showcase the final look and feel of the Book Shelf website. These mockups present the visual design, color schemes, typography choices, and overall aesthetic of the website. They provide stakeholders and team members with a realistic preview of the end product and facilitate discussions about visual elements.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+  ##### <img src="#"></h2>
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+  - ##### Colour Scheme
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+    The background image is suitable for the purpose of the website.
+    The main colours used are black, brown and orange.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+  - ##### Typography
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+    The Lato font is the main font used through out the website.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+  - ##### Imagery
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+    The background image is suitable for the website. The book list section has images of the books.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+  - #### Diagrams:
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+    Several diagrams were created to illustrate the user flows, information architecture, and interaction patterns of the Book Shelf website. These diagrams help visualize how users navigate through the website, understand the organization of content, and interact with various features. They provide a clear representation of the website's structure and logic.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+    <h2 align="center"><img src="#"></h2>
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Features
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- Responsive on all device sizes
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- Interactive elements
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+- informative messages
 
-------
+## Technologies Used
 
-## FAQ about the uptime script
+### Languages Used
 
-**Why have you added this script?**
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [Python](<https://en.wikipedia.org/wiki/Python_(programming_language)>)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### Frameworks, Libraries & Programs Used
 
-**How will this affect me?**
+1. [Django==3.2](<https://en.wikipedia.org/wiki/Django_(web_framework)>)
+   Django framework was used to speed up development of the application which was mainly built in the Python programming language.
+2. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+   Bootstrap was used to assist with the responsiveness and styling of the website.
+3. [Hover.css:](https://ianlunn.github.io/Hover/)
+   Hover.css was used on the Social Media icons in the footer to add the float transition while being hovered over.
+4. [Google Fonts:](https://fonts.google.com/)
+   Google fonts were used to import the 'Lato' font into the style.css file which is used on all pages throughout the project.
+5. [Font Awesome:](https://fontawesome.com/)
+   Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
+6. [jQuery:](https://jquery.com/)
+   jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
+7. [Git](https://git-scm.com/)
+   Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+8. [GitHub:](https://github.com/)
+   GitHub is used to store the projects code after being pushed from Git.
+9. [Heroku](https://en.wikipedia.org/wiki/Heroku)
+   Heroku was used to deploy this project to.
+10. [PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL)
+    PostgreSQL was used as database for this project.
+11. [Stripe](https://en.wikipedia.org/wiki/Stripe,_Inc.)
+    - Stripe was used as payment system. It is a famous platform for secure payment.
+12. [Amazon S3](https://en.wikipedia.org/wiki/Amazon_S3)
+    - AWS was used to store the static and media files.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## Testing Write-ups:
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+Comprehensive testing was conducted throughout the development of the Book Shelf Website to ensure its functionality, usability, and compatibility across different devices and browsers. The testing process involved the following key steps:
 
-**So….?**
+- ### Functional Testing:
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+  Rigorous testing was performed to verify that all interactive elements, such as navigation menus, forms, and buttons, function as intended. This includes testing links, form submissions, and error handling to ensure a seamless user experience.
 
-**Can I opt out?**
+- ### Responsive Testing:
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+  The website was tested on various devices, including desktop computers, tablets, and smartphones, to ensure responsiveness and optimal performance across different screen sizes. This testing aimed to guarantee that the website provides a consistent and user-friendly experience regardless of the device used.
+
+- ### Browser Compatibility Testing:
+
+  The Book Shelf website was tested on multiple web browsers, including popular ones such as Chrome, Firefox, Safari, and Internet Explorer, to ensure consistent rendering and functionality across different browser environments.
+
+- ### Usability Testing:
+
+  Usability tests were conducted to gather feedback from representative users, evaluating their experience with the website's navigation, content readability, and overall usability. This feedback was used to identify areas for improvement and make necessary adjustments to enhance user satisfaction.
+
+- ### Performance Testing:
+  Performance testing was carried out to assess the website's loading speed and responsiveness. This involved evaluating page load times, optimizing image sizes, and minimizing unnecessary code or resources to ensure optimal performance.
+- ### Testing User Stories from User Experience (UX) Section:
+  1. As a user, I want to be able to register for an account and easily login/out.
+     The account link can be found at the right corner of the navigation bar and it has the signup, login/out links.
+  2. As a user, I want to be able to easily navigate through the website.
+     The landing page has a clear structure. In the header section there is a button to view books. All the links can also be found on the footer section.
+  3. As a user, I want to be able to contact the store.
+     The contact information can be found on the footer section.
+  4. As a user, I want to be able to easily make a reservation.
+     Users can reserve books by klicking the link at each book detail page.
+  5. As a user, I want to be able to view my reservation.
+     Users can access their reservations through their reservations page. A link to the page can be found on the footer section.
+  6. As a user, I want to be able edit my reservation.
+     Users can edit their reservations on the reservation details page.
+  7. As a user, I want to be able to cancel my reservation.
+     Users can also cancel their reservations on the reservation details page.
+  8. As a user, I want to be able to view my reservation.
+     Users can view their reservations on the reservations page.
+  9. As a user, I want to be able to view all the books.
+     Users can view all the books by clicking the button of the book list on the home page. 
+  10. As a user, I want to search for books so that I can find specific books I'm interested in.
+     Users can search for specific book by typing the name in the search bar at the top of the book list page.
+  11. As a user, I want to pay for my reservations securely and receive confirmation of my successful.
+     Users can fill their payment details and make a purchase at the checkout page.
+### Known Bugs
+
+- All the functionalities look fine. However, the aplication can be improved in some areas. 
+
+## Deployment
+
+### GitHub Pages
+
+The project was deployed to GitHub Pages using the following steps...
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
+   - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
+3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
+4. Under "Source", click the dropdown called "None" and select "Main Branch".
+5. The page will automatically refresh.
+6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
+
+### Forking the GitHub Repository
+
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. You should now have a copy of the original repository in your GitHub account.
+
+### Making a Local Clone
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+2. Under the repository name, click "Clone or download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, and then paste the URL you copied in Step 3.
 
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
+git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 ```
 
-**Anything more?**
+7. Press Enter. Your local clone will be created.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+> Cloning into `CI-Clone`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+```
 
----
+Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
-Happy coding!
+### Deployment to Heroku
+
+- details of deployment to Heroku can be found [here](https://devcenter.heroku.com/articles/git#:~:text=To%20deploy%20your%20app%20to,heroku%20main%20Initializing%20repository%2C%20done.).
+
+## Credits
+
+### Code
+
+- [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library was used throughout the project mainly to make site responsive using the Bootstrap Grid System.
+- [Django 3.2](https://docs.djangoproject.com/en/4.2/releases/3.2/): Django Library was used throughout the project to make use of the buildin classes.
+
+### Content
+
+- All content was written by the developer.
+
+- The structure of the README.md was found [here](https://github.com/Code-Institute-Solutions/SampleREADME/blob/master/README.md)
+
+### Media
+
+- Some of Images were downloaded from [here](https://pixabay.com/images/search/bouquet%20flowers/).
+- The books images were created by the developer.
+
+### Acknowledgements
+
+- My Mentor for continuous helpful feedback.
+
+- Tutor support aand student care at Code Institute for their support.
