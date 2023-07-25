@@ -40,11 +40,14 @@ conveniently at our designated location. This document aims to provide an overvi
 
   Wireframes were created as a blueprint for the Book Shelf website, outlining the layout, structure, and key elements of each page. These wireframes illustrate the placement of navigation pages, content sections, imagery, and interactive components. They serve as a foundation for further design iterations and development.
 
-  ##### Home page Wireframe <img src="https://flower-factory.s3.eu-west-1.amazonaws.com/media/homepage-wireframe.jpg"></h2>
+  ##### Home page Wireframe 
+    <img src="https://flower-factory.s3.eu-west-1.amazonaws.com/media/homepage-wireframe.jpg"></h2>
 
-  ##### List of books page Wireframe <img src="https://flower-factory.s3.eu-west-1.amazonaws.com/media/booklist-wireframe.jpg"></h2>
+  ##### List of books page Wireframe 
+    <img src="https://flower-factory.s3.eu-west-1.amazonaws.com/media/booklist-wireframe.jpg"></h2>
 
-  ##### Mobile Wireframe <img src="https://flower-factory.s3.eu-west-1.amazonaws.com/media/mobileview-wireframe.jpg"></h2>
+  ##### Mobile Wireframe 
+    <img src="https://flower-factory.s3.eu-west-1.amazonaws.com/media/mobileview-wireframe.jpg"></h2>
 
   - #### Mockups:
 
