@@ -220,6 +220,16 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 - details of deployment to Heroku can be found [here](https://devcenter.heroku.com/articles/git#:~:text=To%20deploy%20your%20app%20to,heroku%20main%20Initializing%20repository%2C%20done.).
 
+### Creating database
+
+1. Log in to ElephantSQL.com to access your dashboard
+2. Click “Create New Instance”
+3. Set up your plan
+4. Select “Select Region”
+5. Select a data center near you
+6. Then click “Review”
+7. Check your details are correct and then click “Create instance”
+
 ## Credits
 
 ### Code
