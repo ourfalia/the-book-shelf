@@ -1,13 +1,13 @@
 <h1 align="center">The book Shelf</h1>
 
-[View the live project here.](#)
+[View the live project here.](https://the-book-shelf-2a8f1c030fac.herokuapp.com/)
 
 Welcome to The Book Shelf, your premier destination for hassle-free book rentals in Dublin!
 Discover a vast collection of titles, reserve your favorites online, and collect your books 
 conveniently at our designated location. This document aims to provide an overview of the design process and reasoning behind the The Book Shelf website, as well as showcase the wireframes, mockups, and diagrams created during its development. The purpose of this documentation is to offer a comprehensive understanding of the design choices and facilitate effective collaboration among stakeholders, developers, and designers.
  The website is fully functioning as an E-commerce application used to enable potential customers to reserve books online and pay for their reservations. It is designed to be responsive and accessible on a range of devices, making it easy to navigate for potential partners. A B2C (business to customer) model was used in building this website.  The application is based on a single payment model as customers pay for single reservations they make online. Due to low budget, our marketing strategy was confined to only Facebook page. The project was also linked to social media by ceating a page on FaceBook for the business. The FaceBook page can be viewed
 
-<h2 align="center"><img src="#"></h2>
+<h2 align="center"><img src="https://flower-factory.s3.eu-west-1.amazonaws.com/media/the-book-fb.jpg"></h2>
 
 ## User Experience (UX)
 
@@ -40,17 +40,17 @@ conveniently at our designated location. This document aims to provide an overvi
 
   Wireframes were created as a blueprint for the Book Shelf website, outlining the layout, structure, and key elements of each page. These wireframes illustrate the placement of navigation pages, content sections, imagery, and interactive components. They serve as a foundation for further design iterations and development.
 
-  ##### Home page Wireframe <img src="#"></h2>
+  ##### Home page Wireframe <img src="https://flower-factory.s3.eu-west-1.amazonaws.com/media/homepage-wireframe.jpg"></h2>
 
-  ##### List of books page Wireframe <img src="#"></h2>
+  ##### List of books page Wireframe <img src="https://flower-factory.s3.eu-west-1.amazonaws.com/media/booklist-wireframe.jpg"></h2>
 
-  ##### Mobile Wireframe <img src="#"></h2>
+  ##### Mobile Wireframe <img src="https://flower-factory.s3.eu-west-1.amazonaws.com/media/mobileview-wireframe.jpg"></h2>
 
   - #### Mockups:
 
   High-fidelity mockups were developed to showcase the final look and feel of the Book Shelf website. These mockups present the visual design, color schemes, typography choices, and overall aesthetic of the website. They provide stakeholders and team members with a realistic preview of the end product and facilitate discussions about visual elements.
 
-  ##### <img src="#"></h2>
+  ##### <img src="https://flower-factory.s3.eu-west-1.amazonaws.com/media/all-devices-black.jpg"></h2>
 
   - ##### Colour Scheme
 
@@ -69,7 +69,7 @@ conveniently at our designated location. This document aims to provide an overvi
 
     Several diagrams were created to illustrate the user flows, information architecture, and interaction patterns of the Book Shelf website. These diagrams help visualize how users navigate through the website, understand the organization of content, and interact with various features. They provide a clear representation of the website's structure and logic.
 
-    <h2 align="center"><img src="#"></h2>
+    <h2 align="center"><img src="https://flower-factory.s3.eu-west-1.amazonaws.com/media/diagram.jpg"></h2>
 
 ## Features
 
