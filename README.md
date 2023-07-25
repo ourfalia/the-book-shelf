@@ -114,9 +114,9 @@ conveniently at our designated location. This document aims to provide an overvi
 10. [PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL)
     PostgreSQL was used as database for this project.
 11. [Stripe](https://en.wikipedia.org/wiki/Stripe,_Inc.)
-    - Stripe was used as payment system. It is a famous platform for secure payment.
+    Stripe was used as payment system. It is a famous platform for secure payment.
 12. [Amazon S3](https://en.wikipedia.org/wiki/Amazon_S3)
-    - AWS was used to store the static and media files.
+    AWS was used to store the static and media files.
 
 
 ## Testing Write-ups:
